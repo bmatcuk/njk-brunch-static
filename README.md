@@ -1,32 +1,32 @@
-![Release](https://img.shields.io/npm/v/nunjucks-brunch-static.svg)
+![Release](https://img.shields.io/npm/v/njk-brunch-static.svg)
 
-# nunjucks-brunch-static
+# njk-brunch-static
 Compile static nunjucks files with brunch.
 
-nunjucks-brunch-static is a processor for [html-brunch-static](https://github.com/bmatcuk/html-brunch-static), a [brunch](http://brunch.io/) plugin designed to handle static html files. nunjucks-brunch-static can convert nunjucks files into static html files with html-brunch-static's support for layouts and partial views.
+njk-brunch-static is a processor for [html-brunch-static](https://github.com/bmatcuk/html-brunch-static), a [brunch](http://brunch.io/) plugin designed to handle static html files. njk-brunch-static can convert nunjucks files into static html files with html-brunch-static's support for layouts and partial views.
 
 If you're looking for support for deprecated "jade" files, check out [jade-brunch-static](https://github.com/bmatcuk/jade-brunch-static).
 
 ## Installation
-nunjucks-brunch-static depends on [html-brunch-static](https://github.com/bmatcuk/html-brunch-static), which also depends on [brunch-static](https://github.com/bmatcuk/brunch-static), so, you will need to install all three. The recommended method is via npm:
+njk-brunch-static depends on [html-brunch-static](https://github.com/bmatcuk/html-brunch-static), which also depends on [brunch-static](https://github.com/bmatcuk/brunch-static), so, you will need to install all three. The recommended method is via npm:
 
 ```bash
-npm install --save-dev brunch-static html-brunch-static nunjucks-brunch-static
+npm install --save-dev brunch-static html-brunch-static njk-brunch-static
 ```
 
 Or manually:
 
 * Add `"brunch-static": "x.y.z"` to package.json
 * Add `"html-brunch-static": "x.y.z"` to package.json
-* Add `"nunjucks-brunch-static": "x.y.z"` to package.json
+* Add `"njk-brunch-static": "x.y.z"` to package.json
 * Run `npm install`
 * Alternatively, you may use the latest git version with:
   * `"brunch-static": "git+ssh://git@github.com:bmatcuk/brunch-static"`
   * `"html-brunch-static": "git+ssh://git@github.com:bmatcuk/html-brunch-static"`
-  * `"nunjucks-brunch-static": "git+ssh://git@github.com:bmatcuk/nunjucks-brunch-static"`
+  * `"njk-brunch-static": "git+ssh://git@github.com:bmatcuk/njk-brunch-static"`
 
 ## Configuration
-Add nunjucks-brunch-static to your list of html-brunch-static processors:
+Add njk-brunch-static to your list of html-brunch-static processors:
 
 ```coffee
 exports.config =
@@ -36,8 +36,8 @@ exports.config =
       processors: [
         require('html-brunch-static')({
           processors: [
-            require('nunjucks-brunch-static')({
-              fileMatch: 'source/views/home.nunjucks',
+            require('njk-brunch-static')({
+              fileMatch: 'source/views/home.njk',
               fileTransform: (filename) => filename.replace(/static\.njk/, '.html')
             })
           ]
@@ -47,7 +47,7 @@ exports.config =
   }
 ```
 
-Most options passed to nunjucks-brunch-static are passed, verbatim, to [nunjucks](https://github.com/mozilla/nunjucks), with the exception of:
+Most options passed to njk-brunch-static are passed, verbatim, to [nunjucks](https://github.com/mozilla/nunjucks), with the exception of:
 
 * **fileMatch** _(default: `/\.static\.njk/`)_
 
