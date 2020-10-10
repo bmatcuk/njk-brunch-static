@@ -1,0 +1,31 @@
+{
+  "author": "Bob Matcuk",
+  "name": "njk-brunch-static",
+  "description": "Compile static nunjucks files with brunch.",
+  "keywords": [
+    "brunch",
+    "static",
+    "nunjucks",
+    "njk",
+    "html"
+  ],
+  "version": "1.0.0",
+  "homepage": "https://github.com/bmatcuk/nunjucks-brunch-static",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "bmatcuk/nunjucks-brunch-static"
+  },
+  "scripts": {
+    "prepare": "brunch build -p",
+    "start": "brunch watch"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.2",
+    "lodash.merge": "^4.6.2"
+  },
+  "devDependencies": {
+    "brunch": "~2.10.17",
+    "coffee-script-brunch": "~3.0.0"
+  }
+}
